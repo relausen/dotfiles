@@ -1,0 +1,7 @@
+{{ if eq .chezmoi.osRelease.id "arch" -}}
+#!/bin/sh
+pacman -S --noconfirm bat direnv eza fd fzf gh jq lazygit mise neovim ripgrep ruff starship thefuck tmux uv zoxide
+{{ else if eq .chezmoi.os "darwin" -}}
+#!/bin/sh
+brew install bat direnv eza fd fzf gh jq lazygit mise neovim ripgrep ruff starship thefuck tmux uv zoxide
+{{ end -}}
