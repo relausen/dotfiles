@@ -3,7 +3,7 @@
 pacman -Sy
 pacman -S --noconfirm <<EOF
 {{ range .packages.arch -}}
-{{ . | quote }} \
+{{ . | quote }} 
 {{ end -}}
 EOF
 {{ end -}}
