@@ -36,36 +36,4 @@ pacman -S --noconfirm \
   zip \
   zoxide \
   zsh
-{{ else if eq .chezmoi.os "darwin" -}}
-#!/bin/sh
-brew install \
-  awscli \
-  azure-cli \
-  bat \
-  devcontainer \
-  difftastic \
-  direnv \
-  dotnet \
-  eza \
-  fastfetch \
-  fd \
-  fzf \
-  gh \
-  git \
-  git-delta \
-  go \
-  jq \
-  lazygit \
-  mise \
-  neovim \
-  ripgrep \
-  ruff \
-  starship \
-  thefuck \
-  tmux \
-  tree \
-  uv \
-  wget \
-  yarn \
-  zoxide
 {{ end -}}
