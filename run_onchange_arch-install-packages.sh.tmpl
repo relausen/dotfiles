@@ -1,7 +1,7 @@
 {{ if eq .chezmoi.osRelease.id "arch" -}}
 #!/bin/sh
 pacman -Sy
-pacman -S --noconfirm <<EOF
+cat | xargs pacman -S --noconfirm <<EOF
 {{ range .packages.arch -}}
 {{ . | quote }} 
 {{ end -}}
