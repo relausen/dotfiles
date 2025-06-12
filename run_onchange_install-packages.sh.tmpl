@@ -1,6 +1,7 @@
 {{ if eq .chezmoi.osRelease.id "arch" -}}
 #!/bin/sh
 pacman -Sy
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 pacman -S --noconfirm bat direnv eza fd fzf github-cli jq lazygit mise neovim ripgrep ruff starship thefuck tmux ttf-nerd-fonts-symbols-mono uv wezterm zoxide zsh
 {{ else if eq .chezmoi.os "darwin" -}}
 #!/bin/sh
