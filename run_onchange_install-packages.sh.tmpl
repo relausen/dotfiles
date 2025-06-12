@@ -1,5 +1,6 @@
 {{ if eq .chezmoi.osRelease.id "arch" -}}
 #!/bin/sh
+pacman -Sy
 pacman -S --noconfirm bat direnv eza fd fzf github-cli jq lazygit mise neovim ripgrep ruff starship thefuck tmux ttf-nerd-fonts-symbols-mono uv wezterm zoxide
 {{ else if eq .chezmoi.os "darwin" -}}
 #!/bin/sh
